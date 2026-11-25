@@ -2,6 +2,25 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <Text id="text1" text="Testing"/>
+    <content>
+            <VBox id="_IDGenVBox" class="sapUiMediumMargin" width="320px">
+                <Label id="_IDGenLabel" text="First Number" labelFor="num1" />
+                <Input id="num1" type="Number" placeholder="Enter first number" />
+
+                <Label id="_IDGenLabel1" text="Second Number" labelFor="num2" class="sapUiSmallMarginTop" />
+                <Input id="num2" type="Number" placeholder="Enter second number" />
+
+                <HBox id="_IDGenHBox" class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+                    <Button id="_IDGenButton1" text="+" press=".onCalculate('add')" width="68px" />
+                    <Button id="_IDGenButton2" text="-" press=".onCalculate('sub')" width="68px" />
+                    <Button id="_IDGenButton3" text="*" press=".onCalculate('mul')" width="68px" />
+                    <Button id="_IDGenButton4" text="÷" press=".onCalculate('div')" width="68px" />
+                </HBox>
+
+                <Button id="_IDGenButton5" text="Clear" press=".onClear" class="sapUiSmallMarginTop" width="100%" />
+
+                <Title id="resultText" text="Result: 0" level="H3" class="sapUiMediumMarginTop" />
+            </VBox>
+        </content>
     </Page>
 </mvc:View>

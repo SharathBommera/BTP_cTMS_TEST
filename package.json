@@ -8,17 +8,22 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
-  "dependencies": {},
   "devDependencies": {
-    "@ui5/cli": "^4.0.33",
-    "@sap/ux-ui5-tooling": "1",
     "@sap-ux/eslint-plugin-fiori-tools": "^10.0.0",
+    "@sap/ux-ui5-tooling": "1",
+    "@ui5/cli": "^4.0.33",
+    "chai": "^6.3.0",
     "eslint": "^10",
-    "ui5-task-zipper": "^3.4.x",
+    "mbt": "^1.2.49",
+    "mocha": "^12.0.3",
     "rimraf": "^5.0.5",
-    "mbt": "^1.2.49"
+    "ui5-task-zipper": "^3.4.x",
+    "@ui5/middleware-code-coverage": "2.0.4",
+    "qunit": "latest",
+    "qunitjs": "latest"
   },
   "scripts": {
+    "unit-tests": "fiori run --open test/unit/unitTests.qunit.html",
     "start": "fiori run --open \"test/flp.html#app-preview\"",
     "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flp.html#app-preview\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",

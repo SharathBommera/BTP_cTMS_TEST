@@ -26,6 +26,8 @@ server:
       configuration:
         flp:
           theme: sap_horizon
+    - name: "@ui5/middleware-code-coverage"
+      afterMiddleware: compression
 builder:
   resources:
     excludes:

@@ -1,0 +1,5 @@
+stages:
+  additionalTests:                                       # only valid if you use the "mta" or "npm" build tool
+    npmTests:
+      buildDescriptor: "package.json"
+      npmScript: "unit-tests"
